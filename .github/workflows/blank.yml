@@ -23,5 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: git checkout latest code here 
+        run: git clone https://github.com/Shubham-Bawa/demo.git
       - name: To test the script 
         run: echo Hello, world! > test.txt && ls 
