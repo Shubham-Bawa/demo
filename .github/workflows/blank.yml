@@ -1,19 +1,20 @@
-name: Greeting on variable day
-
+name: ForLoop 
 on:
-  workflow_dispatch
-
-env:
-  DAY_OF_WEEK: Monday
-  
+  push:
+    branches:
+      - main
 
 jobs:
-  greeting_job:
+  for-loop-job:
     runs-on: ubuntu-latest
-    env:
-      Greeting: Hello
     steps:
-      - name: "Say Hello Mona it's Monday"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-        env:
-          First_Name: Mona
+
+      # Define a list of items to iterate over
+      - name: Set up variables
+        run: |
+          ITEMS="item1 item2 item3"
+      - name: Loop over items
+        run: |
+          for ITEM in $ITEMS; do
+            echo "Processing $ITEM"
+          done
