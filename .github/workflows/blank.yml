@@ -10,5 +10,7 @@ jobs:
     runs-on: shubham-label
     steps:
       - name: going wirte steps for build 
-        run: echo "this step is build" 
+        run: |
+          echo "this step is build" 
+          echo " this setp is completed " >> demo.txt
    
