@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: shubham-label
     steps:
       - name: going wirte steps for build 
         run: echo "this step is build" 
